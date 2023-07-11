@@ -50,9 +50,9 @@ public class Student {
      * @param fees the fees that the student pays.
      */
 
-    public void updateFeesPaid(int fees) {
+    public void payFees(int fees) {
         feesPaid += fees;
-
+        School.updateTotalMoneyEarned(feesPaid);
     }
 
     public int getFeesPaid() {
@@ -73,5 +73,13 @@ public class Student {
 
     public String getName() {
         return name;
+    }
+
+    /**
+     *
+     * @return the remaining fees.
+     */
+    public int getRemainingFees(){
+        return feesTotal - feesPaid;
     }
 }

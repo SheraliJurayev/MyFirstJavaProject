@@ -10,7 +10,7 @@ import java.util.List;
 public class School {
     private List<Teacher> teachers;
     private List<Student> students;
-    private int totalMoneyEarned;
+    private static int totalMoneyEarned;
     private int totalMoneySpent;
 
     /**
@@ -69,7 +69,7 @@ public class School {
      * Adds the total money earned by the school.
      * @param MoneyEarned money that is suppsed to be added.
      */
-    public void updateTotalMoneyEarned(int MoneyEarned) {
+    public static void updateTotalMoneyEarned(int MoneyEarned) {
         totalMoneyEarned += MoneyEarned;
     }
 
@@ -86,7 +86,7 @@ public class School {
      * is the salary given by the school to its teachers.
      * @param moneySpent the money spent by school.
      */
-    public void updateTotalMoneySpent(int moneySpent) {
+    public static void updateTotalMoneySpent(int moneySpent) {
         totalMoneyEarned -= moneySpent;
     }
 }
